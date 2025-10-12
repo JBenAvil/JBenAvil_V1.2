@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="app.js"></script>
     <div class="bg-fixed"></div>
 
     <nav class="vertical-nav" id="verticalNav">
@@ -68,6 +67,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Data JSON integrado
         const data = {
             "inicio": {
                 "imagen": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
@@ -85,33 +85,36 @@
                 "descripcion": "Facilitamos el proceso de constitución y formalización de tu empresa con asesoría legal y administrativa completa. Nuestros planes se adaptan a diferentes etapas empresariales.",
                 "planes": [
                     {
-                        "nombre": "Emprendedor",
-                        "descripcion": "$25.000 + IVA Mensual",
+                        "nombre": "Plan Emprendedor",
+                        "descripcion": "Ideal para nuevos emprendedores que están iniciando su negocio.",
                         "caracteristicas": [
-                            "Formalización",
-                            "Contabilidad",
-                            "Asesoria",
-                            "Página Web"
+                            "Constitución de empresa",
+                            "Obtención de RUT",
+                            "Inicio de actividades ante SII",
+                            "Asesoría legal básica",
+                            "Registro de marca"
                         ]
                     },
                     {
-                        "nombre": "Pyme",
-                        "descripcion": "$100.000 + IVA Mensual",
+                        "nombre": "Plan Pyme",
+                        "descripcion": "Perfecto para pequeñas y medianas empresas en crecimiento.",
                         "caracteristicas": [
-                            "Contabilidad",
-                            "RRHH",
-                            "Asesoria",
-                            "Página Web"
+                            "Todo lo del Plan Emprendedor",
+                            "Contratos laborales",
+                            "Registro de patentes comerciales",
+                            "Asesoría tributaria mensual",
+                            "Sistema de facturación electrónica"
                         ]
                     },
                     {
-                        "nombre": "Empresa",
-                        "descripcion": "$500.000 + IVA Mensual.",
+                        "nombre": "Plan Empresa",
+                        "descripcion": "Solución completa para empresas consolidadas.",
                         "caracteristicas": [
-                            "Contabilidad",
-                            "RRHH",
-                            "Asesoria",
-                            "Página Web"
+                            "Todo lo del Plan Pyme",
+                            "Auditoría contable",
+                            "Asesoría legal permanente",
+                            "Gestión de cumplimiento normativo",
+                            "Representación ante entidades"
                         ]
                     }
                 ]
@@ -415,6 +418,7 @@
                                                 </button>
                                             </div>
                                             <div class="flip-card-back">
+                                                <h3 class="card-title">${plan.nombre}</h3>
                                                 <ul class="back-list">
                                                     ${plan.caracteristicas.map(item => `<li>${item}</li>`).join('')}
                                                 </ul>
@@ -443,6 +447,29 @@
                         </div>
                     </div>
                 `;
+
+                // Si es la página de inicio, agregar la sección de servicios
+                if (section === 'inicio') {
+                    html += `
+                        <div class="services-section">
+                            <h2 class="services-title">Nuestros Servicios</h2>
+                            <div class="services-grid">
+                                <div class="service-card" onclick="renderContent('formalizacion')">
+                                    <span class="material-icons">business</span>
+                                    <div class="service-card-title">Formalización de Empresa</div>
+                                </div>
+                                <div class="service-card" onclick="renderContent('oficina-virtual')">
+                                    <span class="material-icons">location_city</span>
+                                    <div class="service-card-title">Oficina Virtual</div>
+                                </div>
+                                <div class="service-card" onclick="renderContent('software')">
+                                    <span class="material-icons">code</span>
+                                    <div class="service-card-title">Desarrollo de Software</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
             }
 
             mainContent.innerHTML = html;
@@ -506,8 +533,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             renderContent('inicio');
         });
- 
-</script>
-    
+    </script>
 </body>
 </html>
