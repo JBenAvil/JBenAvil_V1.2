@@ -371,193 +371,210 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .service-card {
-        padding: 25px 15px;
-    }
-
-    .service-card .material-icons {
-        font-size: 40px;
-    }
-
-    .service-card-title {
-        font-size: 1rem;
-    }
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .content-wrapper {
-        padding-right: 100px;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .left-section {
-        flex: 0 0 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .vertical-nav {
-        right: 10px;
-        gap: 10px;
-    }
-
-    .nav-item-vertical {
-        width: 50px;
-        height: 50px;
-    }
-
-    .content-wrapper {
-        padding-right: 80px;
-    }
-
-    .content-row {
-        flex-direction: column;
-    }
-
-    .left-section {
-        flex: 1;
-        width: 100%;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .action-buttons {
-        flex-direction: column;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .course-info {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .services-title {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-item-vertical {
-        width: 45px;
-        height: 45px;
-    }
-
-    .nav-item-vertical .material-icons {
-        font-size: 24px;
-    }
-
-    .content-wrapper {
-        padding: 30px 15px;
-        padding-right: 70px;
-    }
-
-    .main-container {
-        padding: 25px 20px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .section-description {
-        font-size: 1rem;
-    }
-
-    .flip-card {
-        height: 380px;
-    }
-
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        bottom: 20px;
-        left: 20px;
-    }
-
-    .btn-custom {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-    }
-}
-
-.services-section {
-    margin-top: 50px;
-    padding-top: 40px;
-    border-top: 2px solid rgba(0, 255, 255, 0.2);
-}
-
-.services-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #00ffff;
-    text-align: center;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
 .services-grid {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
+    gap: 20px;
 }
 
 .service-card {
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid rgba(0, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-}
-
-.service-card:hover {
-    transform: scale(1.1);
-    border-color: #00ffff;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-    background: rgba(0, 191, 255, 0.2);
+    padding: 25px 15px;
 }
 
 .service-card .material-icons {
-    font-size: 48px;
-    color: #00ffff;
+    font-size: 40px;
 }
 
 .service-card-title {
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem;
+}
+.cards-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content-wrapper {
+    padding-right: 100px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+}
+
+.left-section {
+    flex: 0 0 350px;
+}
+}
+
+@media (max-width: 768px) {
+.vertical-nav {
+    right: 10px;
+    gap: 10px;
+}
+
+.nav-item-vertical {
+    width: 50px;
+    height: 50px;
+}
+
+.content-wrapper {
+    padding-right: 80px;
+}
+
+.content-row {
+    flex-direction: column;
+}
+
+.left-section {
+    flex: 1;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2rem;
+}
+
+.cards-container {
+    grid-template-columns: 1fr;
+}
+
+.action-buttons {
+    flex-direction: column;
+}
+
+.footer-content {
+    flex-direction: column;
     text-align: center;
+}
+
+.course-info {
+    grid-template-columns: 1fr;
+}
+
+.services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 400px;
+}
+
+.services-title {
+    font-size: 1.6rem;
+}
+
+.service-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.service-card .material-icons {
+    font-size: 36px;
+}
+
+.service-card-title {
+    text-align: left;
+    font-size: 1rem;
+}
+}
+
+@media (max-width: 480px) {
+.nav-item-vertical {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-item-vertical .material-icons {
+    font-size: 24px;
+}
+
+.content-wrapper {
+    padding: 30px 15px;
+    padding-right: 70px;
+}
+
+.main-container {
+    padding: 25px 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+}
+
+.section-description {
+    font-size: 1rem;
+}
+
+.flip-card {
+    height: 380px;
+}
+
+.whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.btn-custom {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+}
+
+.services-section {
+margin-top: 50px;
+padding-top: 40px;
+border-top: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+.services-title {
+font-size: 2rem;
+font-weight: 700;
+color: #00ffff;
+text-align: center;
+margin-bottom: 40px;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.service-card {
+background: rgba(0, 0, 0, 0.8);
+border: 2px solid rgba(0, 255, 255, 0.3);
+border-radius: 15px;
+padding: 30px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.service-card:hover {
+transform: scale(1.1);
+border-color: #00ffff;
+box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+background: rgba(0, 191, 255, 0.2);
+}
+
+.service-card .material-icons {
+font-size: 48px;
+color: #00ffff;
+}
+
+.service-card-title {
+color: #ffffff;
+font-size: 1.1rem;
+font-weight: 600;
+text-align: center;
 }
