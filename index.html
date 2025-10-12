@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBenAvil SpA - Soluciones Integrales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="app.js"></script>
+    <div class="bg-fixed"></div>
+
+    <nav class="vertical-nav" id="verticalNav">
+        <div class="nav-item-vertical" data-section="inicio" title="Inicio">
+            <span class="material-icons">home</span>
+        </div>
+        <div class="nav-item-vertical" data-section="quienes-somos" title="Quiénes Somos">
+            <span class="material-icons">info</span>
+        </div>
+        <div class="nav-item-vertical" data-section="formalizacion" title="Formalización de Empresa">
+            <span class="material-icons">business</span>
+        </div>
+        <div class="nav-item-vertical" data-section="oficina-virtual" title="Oficina Virtual">
+            <span class="material-icons">location_city</span>
+        </div>
+        <div class="nav-item-vertical" data-section="software" title="Desarrollo de Software">
+            <span class="material-icons">code</span>
+        </div>
+        <div class="nav-item-vertical" data-section="capacitaciones" title="Capacitaciones">
+            <span class="material-icons">school</span>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="main-container" id="mainContent">
+            <!-- El contenido se renderizará aquí dinámicamente -->
+        </div>
+    </div>
+
+    <div class="whatsapp-float" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                © 2025 JBenAvil SpA. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const data = {
+            "inicio": {
+                "imagen": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+                "titulo": "JBenAvil SpA",
+                "descripcion": "Somos una empresa líder en soluciones integrales para negocios. Ofrecemos servicios de formalización de empresas, desarrollo de software personalizado, oficinas virtuales y capacitaciones especializadas. Nuestro compromiso es impulsar el crecimiento de tu negocio con soluciones innovadoras y profesionales."
+            },
+            "quienes-somos": {
+                "imagen": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+                "titulo": "Quiénes Somos",
+                "descripcion": "Con más de 10 años de experiencia, JBenAvil SpA se ha consolidado como una empresa referente en soluciones empresariales integrales. Contamos con un equipo multidisciplinario de expertos comprometidos con la excelencia y la innovación. Nuestra misión es facilitar el crecimiento sostenible de las empresas mediante servicios de calidad que se adaptan a las necesidades específicas de cada cliente."
+            },
+            "formalizacion": {
+                "imagen": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
+                "titulo": "Formalización de Empresas",
+                "descripcion": "Facilitamos el proceso de constitución y formalización de tu empresa con asesoría legal y administrativa completa. Nuestros planes se adaptan a diferentes etapas empresariales.",
+                "planes": [
+                    {
+                        "nombre": "Emprendedor",
+                        "descripcion": "$25.000 + IVA Mensual",
+                        "caracteristicas": [
+                            "Formalización",
+                            "Contabilidad",
+                            "Asesoria",
+                            "Página Web"
+                        ]
+                    },
+                    {
+                        "nombre": "Pyme",
+                        "descripcion": "$100.000 + IVA Mensual",
+                        "caracteristicas": [
+                            "Contabilidad",
+                            "RRHH",
+                            "Asesoria",
+                            "Página Web"
+                        ]
+                    },
+                    {
+                        "nombre": "Empresa",
+                        "descripcion": "$500.000 + IVA Mensual.",
+                        "caracteristicas": [
+                            "Contabilidad",
+                            "RRHH",
+                            "Asesoria",
+                            "Página Web"
+                        ]
+                    }
+                ]
+            },
+            "software": {
+                "imagen": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+                "titulo": "Desarrollo de Software",
+                "descripcion": "Creamos soluciones tecnológicas a medida para optimizar los procesos de tu empresa. Desde páginas web hasta sistemas de gestión complejos.",
+                "planes": [
+                    {
+                        "nombre": "Páginas Web",
+                        "descripcion": "Sitios web profesionales y responsivos para tu negocio.",
+                        "caracteristicas": [
+                            "Diseño responsive",
+                            "SEO optimizado",
+                            "Panel de administración",
+                            "Integración con redes sociales",
+                            "Hosting y dominio incluido"
+                        ]
+                    },
+                    {
+                        "nombre": "Aplicaciones",
+                        "descripcion": "Aplicaciones móviles y web personalizadas.",
+                        "caracteristicas": [
+                            "Desarrollo iOS y Android",
+                            "Interfaz intuitiva",
+                            "Base de datos en la nube",
+                            "Actualizaciones incluidas",
+                            "Soporte técnico 24/7"
+                        ]
+                    },
+                    {
+                        "nombre": "Software de Gestión",
+                        "descripcion": "Sistemas ERP y CRM adaptados a tu empresa.",
+                        "caracteristicas": [
+                            "Módulos personalizables",
+                            "Integración con sistemas existentes",
+                            "Reportes y analytics",
+                            "Multi-usuario",
+                            "Capacitación del personal"
+                        ]
+                    }
+                ]
+            },
+            "oficina-virtual": {
+                "imagen": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+                "titulo": "Oficinas Virtuales",
+                "descripcion": "Dirección comercial prestigiosa para tu empresa sin necesidad de una oficina física. Incluye recepción de correspondencia y atención telefónica.",
+                "planes": [
+                    {
+                        "nombre": "Plan Semestral",
+                        "descripcion": "Solución ideal para proyectos de corto plazo.",
+                        "caracteristicas": [
+                            "Dirección comercial",
+                            "Recepción de correspondencia",
+                            "Casilla postal",
+                            "Notificaciones por email",
+                            "2 horas de sala de reuniones al mes"
+                        ]
+                    },
+                    {
+                        "nombre": "Plan Anual",
+                        "descripcion": "La opción más popular para empresas establecidas.",
+                        "caracteristicas": [
+                            "Todo lo del Plan Semestral",
+                            "Atención telefónica personalizada",
+                            "5 horas de sala de reuniones al mes",
+                            "Uso de oficina compartida",
+                            "Descuento del 15%"
+                        ]
+                    },
+                    {
+                        "nombre": "Plan Bianual",
+                        "descripcion": "Máximo ahorro para compromisos a largo plazo.",
+                        "caracteristicas": [
+                            "Todo lo del Plan Anual",
+                            "10 horas de sala de reuniones al mes",
+                            "Oficina privada 2 días al mes",
+                            "Servicio de secretaria virtual",
+                            "Descuento del 25%"
+                        ]
+                    }
+                ]
+            },
+            "capacitaciones": {
+                "imagen": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800",
+                "titulo": "Capacitaciones JBenAvil",
+                "descripcion": "Ofrecemos programas de capacitación especializada para potenciar las habilidades de tu equipo. Todos nuestros cursos cuentan con certificación oficial y son impartidos por profesionales con amplia experiencia en el sector.",
+                "cursos": [
+                    {
+                        "titulo": "Administración de Empresas",
+                        "imagen": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800",
+                        "descripcion": "Aprende las mejores prácticas en gestión empresarial, planificación estratégica y toma de decisiones. Este curso te proporcionará las herramientas necesarias para administrar eficientemente los recursos de tu empresa.",
+                        "modalidad": "Online",
+                        "horas": "80 horas",
+                        "precio": "$250.000 CLP",
+                        "malla": [
+                            "Fundamentos de administración",
+                            "Planificación estratégica",
+                            "Gestión de operaciones",
+                            "Control de gestión",
+                            "Liderazgo empresarial"
+                        ]
+                    },
+                    {
+                        "titulo": "Gestión Tributaria",
+                        "imagen": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800",
+                        "descripcion": "Domina el sistema tributario chileno y las obligaciones fiscales de las empresas. Incluye aspectos prácticos de declaraciones, impuestos y planificación tributaria.",
+                        "modalidad": "Online",
+                        "horas": "60 horas",
+                        "precio": "$220.000 CLP",
+                        "malla": [
+                            "Sistema tributario chileno",
+                            "IVA y retenciones",
+                            "Impuesto a la renta",
+                            "Declaraciones mensuales y anuales",
+                            "Planificación tributaria"
+                        ]
+                    },
+                    {
+                        "titulo": "Páginas Web para Empresas",
+                        "imagen": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800",
+                        "descripcion": "Crea sitios web profesionales con HTML, CSS y JavaScript. Aprende diseño responsive, UX/UI y las mejores prácticas del desarrollo web moderno.",
+                        "modalidad": "Online",
+                        "horas": "100 horas",
+                        "precio": "$300.000 CLP",
+                        "malla": [
+                            "HTML5 y CSS3 avanzado",
+                            "JavaScript y frameworks",
+                            "Diseño responsive",
+                            "UX/UI para web",
+                            "SEO y optimización"
+                        ]
+                    },
+                    {
+                        "titulo": "Aplicaciones Web",
+                        "imagen": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800",
+                        "descripcion": "Desarrolla aplicaciones web completas con tecnologías modernas. Aprende frontend, backend, bases de datos y despliegue en la nube.",
+                        "modalidad": "Online",
+                        "horas": "120 horas",
+                        "precio": "$350.000 CLP",
+                        "malla": [
+                            "Fundamentos de programación",
+                            "Frontend con React",
+                            "Backend con Node.js",
+                            "Bases de datos SQL y NoSQL",
+                            "Despliegue y DevOps"
+                        ]
+                    },
+                    {
+                        "titulo": "Diseño de Producto",
+                        "imagen": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800",
+                        "descripcion": "Aprende metodologías de diseño centrado en el usuario, prototipado y validación de productos digitales. Desarrolla productos que resuelvan necesidades reales.",
+                        "modalidad": "Online",
+                        "horas": "90 horas",
+                        "precio": "$280.000 CLP",
+                        "malla": [
+                            "Design Thinking",
+                            "Investigación de usuarios",
+                            "Prototipado rápido",
+                            "Testing y validación",
+                            "Product Management"
+                        ]
+                    },
+                    {
+                        "titulo": "Gestión de Personas y RRHH",
+                        "imagen": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800",
+                        "descripcion": "Desarrolla competencias en gestión del talento humano, reclutamiento, clima laboral y estrategias de retención. Conviértete en un líder de equipos efectivo.",
+                        "modalidad": "Online",
+                        "horas": "70 horas",
+                        "precio": "$240.000 CLP",
+                        "malla": [
+                            "Reclutamiento y selección",
+                            "Evaluación de desempeño",
+                            "Clima laboral",
+                            "Desarrollo organizacional",
+                            "Legislación laboral"
+                        ]
+                    }
+                ]
+            }
+        };
+
+        let currentSection = 'inicio';
+        let currentCourse = null;
+
+        // Función para renderizar contenido
+        function renderContent(section, courseIndex = null) {
+            const mainContent = document.getElementById('mainContent');
+            const sectionData = data[section];
+
+            if (!sectionData) return;
+
+            let html = '';
+
+            // Si es un curso específico
+            if (section === 'capacitaciones' && courseIndex !== null) {
+                const curso = sectionData.cursos[courseIndex];
+                currentCourse = courseIndex;
+
+                html = `
+                    <button class="back-button" onclick="renderContent('capacitaciones')">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a Capacitaciones
+                    </button>
+                    <div class="content-row">
+                        <div class="left-section">
+                            <img src="${curso.imagen}" alt="${curso.titulo}">
+                        </div>
+                        <div class="right-section">
+                            <h1 class="section-title">${curso.titulo}</h1>
+                            <p class="section-description">${curso.descripcion}</p>
+                            
+                            <div class="course-info">
+                                <div class="course-info-item">
+                                    <span class="course-info-label">Modalidad</span>
+                                    <span class="course-info-value">${curso.modalidad}</span>
+                                </div>
+                                <div class="course-info-item">
+                                    <span class="course-info-label">Duración</span>
+                                    <span class="course-info-value">${curso.horas}</span>
+                                </div>
+                                <div class="course-info-item">
+                                    <span class="course-info-label">Precio</span>
+                                    <span class="course-info-value">${curso.precio}</span>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button class="btn-custom" onclick="verMalla(${courseIndex})">
+                                    <i class="fas fa-list"></i> Ver Malla Curricular
+                                </button>
+                                <button class="btn-custom" onclick="descargarContenido('${curso.titulo}')">
+                                    <i class="fas fa-download"></i> Descargar Contenido
+                                </button>
+                                <button class="btn-custom" onclick="matricularCurso('${curso.titulo}')">
+                                    <i class="fas fa-graduation-cap"></i> Matricularme
+                                </button>
+                            </div>
+
+                            <div id="mallaContainer" class="hidden" style="margin-top: 30px; padding: 25px; background: rgba(0, 255, 255, 0.1); border-radius: 15px; border: 2px solid rgba(0, 255, 255, 0.3);">
+                                <h3 style="color: #00ffff; margin-bottom: 20px;">Malla Curricular</h3>
+                                <ul class="back-list">
+                                    ${curso.malla.map(item => `<li>${item}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            // Si es capacitaciones (vista general)
+            else if (section === 'capacitaciones' && courseIndex === null) {
+                html = `
+                    <div class="content-row">
+                        <div class="left-section">
+                            <img src="${sectionData.imagen}" alt="${sectionData.titulo}">
+                        </div>
+                        <div class="right-section">
+                            <h1 class="section-title">${sectionData.titulo}</h1>
+                            <p class="section-description">${sectionData.descripcion}</p>
+                            
+                            <div class="cards-container">
+                                ${sectionData.cursos.map((curso, index) => `
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <h3 class="card-title">${curso.titulo}</h3>
+                                                <p class="card-description">${curso.descripcion.substring(0, 100)}...</p>
+                                                <button class="btn-custom" onclick="renderContent('capacitaciones', ${index})">
+                                                    Ver Detalles
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            // Otras secciones con planes
+            else if (sectionData.planes) {
+                html = `
+                    <div class="content-row">
+                        <div class="left-section">
+                            <img src="${sectionData.imagen}" alt="${sectionData.titulo}">
+                        </div>
+                        <div class="right-section">
+                            <h1 class="section-title">${sectionData.titulo}</h1>
+                            <p class="section-description">${sectionData.descripcion}</p>
+                            
+                            <div class="cards-container">
+                                ${sectionData.planes.map((plan, index) => `
+                                    <div class="flip-card" id="card-${section}-${index}">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <h3 class="card-title">${plan.nombre}</h3>
+                                                <p class="card-description">${plan.descripcion}</p>
+                                                <button class="btn-custom" onclick="flipCard('${section}', ${index})">
+                                                    Ver Más
+                                                </button>
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <ul class="back-list">
+                                                    ${plan.caracteristicas.map(item => `<li>${item}</li>`).join('')}
+                                                </ul>
+                                                <button class="btn-custom" onclick="flipCard('${section}', ${index})" style="margin-top: auto;">
+                                                    Volver
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            // Secciones simples (inicio, quienes-somos)
+            else {
+                html = `
+                    <div class="content-row">
+                        <div class="left-section">
+                            <img src="${sectionData.imagen}" alt="${sectionData.titulo}">
+                        </div>
+                        <div class="right-section">
+                            <h1 class="section-title">${sectionData.titulo}</h1>
+                            <p class="section-description">${sectionData.descripcion}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            mainContent.innerHTML = html;
+            currentSection = section;
+        }
+
+        // Función para voltear cards
+        function flipCard(section, index) {
+            const card = document.getElementById(`card-${section}-${index}`);
+            if (card) {
+                card.classList.toggle('flipped');
+            }
+        }
+
+        // Función para ver malla curricular
+        function verMalla(courseIndex) {
+            const mallaContainer = document.getElementById('mallaContainer');
+            if (mallaContainer) {
+                mallaContainer.classList.toggle('hidden');
+            }
+        }
+
+        // Función para descargar contenido
+        function descargarContenido(cursoTitulo) {
+            alert(`Descargando contenido de: ${cursoTitulo}\n\nNota: En producción, esto descargará un PDF desde la raíz del proyecto.`);
+            // En producción: window.location.href = `/pdfs/${cursoTitulo.replace(/\s+/g, '_')}.pdf`;
+        }
+
+        // Función para matricularse
+        function matricularCurso(cursoTitulo) {
+            const mensaje = encodeURIComponent(`Hola, quiero matricularme en el curso ${cursoTitulo}`);
+            const telefono = '56912345678'; // Reemplazar con el número real
+            window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
+        }
+
+        // Botón flotante de WhatsApp
+        document.getElementById('whatsappBtn').addEventListener('click', function() {
+            const mensaje = encodeURIComponent('Hola, me pueden agendar una reunión');
+            const telefono = '56912345678'; // Reemplazar con el número real
+            window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
+        });
+
+        // Navegación vertical
+        document.querySelectorAll('.nav-item-vertical').forEach(item => {
+            item.addEventListener('click', function() {
+                const section = this.getAttribute('data-section');
+                renderContent(section);
+                
+                // Scroll suave al contenido
+                document.querySelector('.main-container').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Renderizar contenido inicial
+        renderContent('inicio');
+
+        // Smooth scroll mejorado
+        document.addEventListener('DOMContentLoaded', function() {
+            renderContent('inicio');
+        });
+ 
+</script>
+    
+</body>
+</html>
