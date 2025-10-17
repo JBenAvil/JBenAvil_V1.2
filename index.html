@@ -29,9 +29,11 @@
         <div class="nav-item-vertical" data-section="software" title="Desarrollo de Software">
             <span class="material-symbols-outlined material-icons">terminal</span>
         </div>
+        <!----
         <div class="nav-item-vertical" data-section="capacitaciones" title="Capacitaciones">
             <span class="material-icons">school</span>
         </div>
+        -->
     </nav>
 
     <div class="content-wrapper">
@@ -212,8 +214,9 @@
                     }
                 ]
             },
-            "capacitaciones": {
-                "imagen": "static/j_benavil.png",
+            
+            //"capacitaciones": {
+                  "imagen": "static/j_benavil.png",
                 "titulo": "Capacitaciones JBenAvil",
                 "descripcion": "Ofrecemos programas de capacitación especializada para potenciar las habilidades de tu equipo. Todos nuestros cursos cuentan con certificación oficial y son impartidos por profesionales con amplia experiencia en el sector.",
                 "cursos": [
@@ -308,7 +311,7 @@
                         ]
                     }
                 ]
-            }
+            //}
         };
 
         let currentSection = 'inicio';
@@ -523,7 +526,7 @@
         // Botón flotante de WhatsApp
         document.getElementById('whatsappBtn').addEventListener('click', function() {
             const mensaje = encodeURIComponent('Hola, me pueden agendar una reunión');
-            const telefono = '56921971687'; // Reemplazar con el número real
+            const telefono = '56921951687'; // Reemplazar con el número real
             window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
         });
 
